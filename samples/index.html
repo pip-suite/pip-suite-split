@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Split View Layout</title>
+
+    <link rel="stylesheet" href="../lib/pip-webui-lib.css" />
+    <link rel="stylesheet" href="../lib/pip-webui.css" />
+    <link rel="stylesheet" href="../dist/pip-webui-split.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <script src="../lib/pip-webui-lib.js"></script>
+    <script src="../lib/pip-webui.js"></script>
+    <script src="../dist/pip-webui-split.js"></script>
+
+    <script src="tool_view.js"></script>
+    <script src="tool_tiles.js"></script>
+    <script src="tool_split.js"></script>
+    <script src="tool_split_list.js"></script>
+    <script src="tool_split_details.js"></script>
+    <script src="tool_split_sub1.js"></script>
+    <script src="tool_split_sub1_details.js"></script>
+    <script src="tool_split_sub2.js"></script>
+    <script src="tool.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-app="app" md-theme="{{ $theme || 'blue' }}" class="{{ $theme }} pip-main layout-column">
+    <pip-main class="layout-column layout-align-start-start">
+        <pip-appbar class="flex-fixed w-stretch">
+            <pip-nav-icon></pip-nav-icon>
+            <pip-breadcrumb></pip-breadcrumb>
+            <div class="flex"></div>
+            <pip-primary-actions></pip-primary-actions>
+            <pip-secondary-actions></pip-secondary-actions>
+        </pip-appbar>
+        <pip-main-body class="flex w-stretch">
+            <div style="width: 100%" ui-view class="layout-column"></div>
+        </pip-main-body>
+    </pip-main>
+    <pip-routing-progress>
+    </pip-routing-progress>
+</body>
+
+</html>
